@@ -24,6 +24,8 @@ def page():
         browser = p.chromium.launch(headless=headless)
         context = browser.new_context()
         page = context.new_page()
+        page.set_default_timeout(15_000)
+        page.set_default_navigation_timeout(60_000)
         yield page
         context.close()
         browser.close()
