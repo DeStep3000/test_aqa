@@ -1,0 +1,13 @@
+services:
+  tests:
+    image: saucedemo-tests:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: saucedemo-tests
+    environment:
+      BASE_URL: "https://www.saucedemo.com/"
+      HEADLESS: "1"
+    volumes:
+      - .:/app
+    command: pytest -q --alluredir=allure-results
