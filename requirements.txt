@@ -1,3 +1,6 @@
+allure-pytest==2.15.3
+allure-python-commons==2.15.3
+attrs==25.4.0
 colorama==0.4.6
 greenlet==3.3.0
 iniconfig==2.3.0
